@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: linear-gradient(135deg,
+#0f2027,#203a43,#2c5364);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+.controls{
+    margin-bottom: 20px;
+}
+input, select{
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: none;
+    margin: 5px;
+    font-size: 14px;
+    outline: none;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+.card{
+    background: rgba(255,255,255,0.95);
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    width: 260px;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+}
+.card:hover{
+    transform: translateY(-8px) scale(1.03) ;
+}
+.card h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.card p{
+    margin: 6px 0;
+    font-size: 15px;
+}
+button{
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    background: #2a5289;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+button:hover{
+    background: #1e3c72;
+}
+.details{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+.card.active .details{
+    max-height: 300px;
+}
+#totalSalary{
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* responsive */
+@media(max-width:768px){
+    .card{
+        width: 90%;
+    }
+    h1{
+        font-size: 24px;
+    }
+}
+
+
+
+
